@@ -13,6 +13,7 @@ Url:		http://zssh.sourceforge.net/
 Source0:	%{name}-%{version}.tar.bz2
 Patch0:		zssh-1.5a-install.patch
 Patch1:		zssh-1.5a-ptmx.patch
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	readline-devel termcap-devel
 
 %description

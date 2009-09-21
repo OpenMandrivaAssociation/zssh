@@ -1,6 +1,6 @@
 %define	name	zssh 
 %define	version	1.5c
-%define	release	%mkrel 6
+%define	release	%mkrel 7
 
 Summary:	Interactive file transfers through ssh
 Name:		%{name}

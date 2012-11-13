@@ -1,0 +1,52 @@
+--- zssh-1.5a/Makefile.in.install	Thu Oct 11 22:59:39 2001
++++ zssh-1.5a/Makefile.in	Sun Oct 14 04:45:49 2001
+@@ -13,6 +13,9 @@
+ prefix		= @prefix@
+ exec_prefix	= @exec_prefix@
+ 
++bindir		= @bindir@
++mandir		= @mandir@
++
+ MAKE		=  @MAKE@
+ INSTALL		=  @INSTALL@
+ TAR		=  @TAR@
+@@ -74,14 +77,15 @@
+ 	ln $(NAME) $@
+ 
+ install :
++	mkdir -p $(bindir) $(mandir)/man1
+ 	strip $(NAME)
+-	$(INSTALL) -m 0711 zssh @bindir@
+-	ln -f @bindir@/zssh  @bindir@/ztelnet
+-	$(INSTALL) -m 0644 $(MANS) @mandir@/man1
++	$(INSTALL) -m 0711 zssh $(bindir)
++	ln -f $(bindir)/zssh  $(bindir)/ztelnet
++	$(INSTALL) -m 0644 $(MANS) $(mandir)/man1
+ 
+ uninstall :
+-	-cd @bindir@      && rm $(PRGS)
+-	-cd @mandir@/man1 && rm $(MANS)
++	-cd $(bindir)      && rm $(PRGS)
++	-cd $(mandir)/man1 && rm $(MANS)
+ 
+ fake_readline : force
+ 	-cd fake_readline && $(MAKE)
+@@ -91,12 +95,12 @@
+ 	cd lrzsz-0.12.20 && $(MAKE)
+ 
+ lrzsz_links :
+-	ln -s @bindir@/lrz @bindir@/rz
+-	ln -s @bindir@/lsz @bindir@/sz
+-	ln -s @bindir@/lrb @bindir@/rb
+-	ln -s @bindir@/lsb @bindir@/sb
+-	ln -s @bindir@/lrx @bindir@/rx
+-	ln -s @bindir@/lsx @bindir@/sx
++	ln -s $(bindir)/lrz $(bindir)/rz
++	ln -s $(bindir)/lsz $(bindir)/sz
++	ln -s $(bindir)/lrb $(bindir)/rb
++	ln -s $(bindir)/lsb $(bindir)/sb
++	ln -s $(bindir)/lrx $(bindir)/rx
++	ln -s $(bindir)/lsx $(bindir)/sx
+ 
+ lrzsz_install :
+ 	cd lrzsz-0.12.20 && $(MAKE) install

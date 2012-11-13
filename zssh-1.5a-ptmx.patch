@@ -1,0 +1,17 @@
+--- zssh-1.5a/configure.in.ptmx	2001-10-12 02:47:44.000000000 +0200
++++ zssh-1.5a/configure.in	2004-02-15 13:49:55.000000000 +0100
+@@ -104,12 +104,12 @@
+   AC_DEFINE(HAVE_GETPSEUDOTTY)
+   AC_MSG_RESULT(getpseudotty)
+ else
+-if test -c /dev/ptmx && test -c /dev/pts/0
++if test -c /dev/ptmx && test -d /dev/pts
+ then
+   AC_DEFINE(HAVE_DEV_PTMX)
+   AC_MSG_RESULT(streams ptys)
+ else
+-if test -c /dev/ptc && test -c /dev/pts || test -d /dev/pts
++if test -c /dev/ptc && (test -c /dev/pts || test -d /dev/pts)
+ then
+   AC_DEFINE(HAVE_DEV_PTS_AND_PTC)
+   AC_MSG_RESULT(/dev/pts and /dev/ptc)

@@ -50,3 +50,53 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/zssh.1*
 %{_mandir}/man1/ztelnet.1*
 
+
+
+%changelog
+* Mon Sep 21 2009 Thierry Vignaud <tvignaud@mandriva.com> 1.5c-7mdv2010.0
++ Revision: 446353
+- rebuild
+
+* Tue Mar 03 2009 Guillaume Rousse <guillomovitch@mandriva.org> 1.5c-6mdv2009.1
++ Revision: 347883
+- rebuild for latest readline
+
+* Mon Aug 04 2008 Thierry Vignaud <tvignaud@mandriva.com> 1.5c-5mdv2009.0
++ Revision: 263229
+- rebuild
+
+* Mon Aug 04 2008 Thierry Vignaud <tvignaud@mandriva.com> 1.5c-4mdv2009.0
++ Revision: 262912
+- rebuild
+
+* Fri Dec 21 2007 Olivier Blin <oblin@mandriva.com> 1.5c-2mdv2008.1
++ Revision: 136634
+- restore BuildRoot
+
+  + Thierry Vignaud <tvignaud@mandriva.com>
+    - kill re-definition of %%buildroot on Pixel's request
+
+
+* Sun Aug 13 2006 Luca Berra <bluca@comedia.it>
++ 08/13/06 06:10:06 (55788)
+rebuild
+
+* Sun Aug 13 2006 Luca Berra <bluca@comedia.it>
++ 08/13/06 05:49:18 (55784)
+import zssh-1.5c-1mdk
+
+* Thu Jun 02 2005 Sebastien Savarin <plouf@mandriva.org> 1.5c-1mdk
+- New release 1.5c
+
+* Thu Jan 20 2005 Per Øyvind Karlsen <peroyvind@linux-mandrake.com> 1.5a-8mdk
+- rebuild for new readline
+- fix summary-ended-with-dot
+- cosmetics
+
+* Sun Feb 15 2004 Luca Berra <bluca@vodka.it> 1.5a-7mdk
+- fix detection of /dev/ptmx
+- remove configure patch, we run autoconf
+
+* Tue Nov 25 2003 Marcel Pol <mpol@mandrake.org> 1.5a-6mdk
+- buildrequires
+

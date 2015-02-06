@@ -4,7 +4,7 @@
 Summary:	Interactive file transfers through ssh
 Name:		zssh 
 Version:	1.5c
-Release:	8
+Release:	9
 License:	GPL
 Group:		Networking/File transfer
 Requires:	lrzsz

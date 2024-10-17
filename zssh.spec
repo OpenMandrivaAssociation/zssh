@@ -8,7 +8,7 @@ Release:	9
 License:	GPL
 Group:		Networking/File transfer
 Requires:	lrzsz
-Url:		http://zssh.sourceforge.net
+Url:		https://zssh.sourceforge.net
 Source0:	http://prdownloads.sf.net/zssh/%{name}-%{version}.tgz
 Patch0:		zssh-1.5a-install.patch
 Patch1:		zssh-1.5a-ptmx.patch
